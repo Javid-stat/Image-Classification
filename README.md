@@ -50,6 +50,14 @@ Validation accuracy is *higher* than training accuracy for most of training. Tha
 
 The model is strongest on classes with distinctive shapes: trousers, bags, sneakers, sandals and ankle boots all score 97–99%. **Shirt** is the hardest class (76.2%): it is mostly confused with T-shirt/top, coat and pullover, which look very similar at 28×28 pixels. Footwear errors stay within footwear (sneaker ↔ ankle boot).
 
+### Testing on real photos
+
+You can classify your own photos with `src/predict.py` (see
+[Try it on your own photos](#5-try-it-on-your-own-photos)). Expect lower accuracy than on the
+test set: the model has only seen clean, centered product shots of a single item on a plain
+background, so it will likely perform best on photos that look similar to that training data
+and worse on busy backgrounds, low contrast, several items or people wearing the clothes.
+
 ---
 
 ## Dataset
@@ -237,6 +245,9 @@ All hyperparameters (epochs, batch size, learning rate, ...) live in `src/config
 - **Learning-rate scheduling** (e.g. `ReduceLROnPlateau` or cosine annealing)
 - **Deeper architectures** with residual connections (ResNet-style)
 - **Transfer to a harder dataset** such as CIFAR-10 (colour images)
+- **Handle real photos better:** remove the background automatically before classifying,
+  or train on more realistic clothing photos
+- **Detect unfamiliar inputs** and answer "not sure" instead of being confidently wrong
 
 ## How this was built
 
