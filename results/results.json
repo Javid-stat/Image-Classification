@@ -1,0 +1,19 @@
+{
+  "test_accuracy": 92.82,
+  "test_loss": 0.2019,
+  "best_epoch": 13,
+  "val_accuracy": 93.23,
+  "trainable_parameters": 468202,
+  "per_class_accuracy": {
+    "T-shirt/top": 86.0,
+    "Trouser": 98.7,
+    "Pullover": 90.7,
+    "Dress": 95.4,
+    "Coat": 89.7,
+    "Sandal": 97.8,
+    "Shirt": 76.2,
+    "Sneaker": 98.2,
+    "Bag": 98.5,
+    "Ankle boot": 97.0
+  }
+}
