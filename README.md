@@ -143,6 +143,7 @@ Image-Classification/
 │   ├── engine.py             # train_one_epoch() and evaluate()
 │   ├── train.py              # training script: trains and saves the best model
 │   ├── evaluate.py           # evaluation script: test accuracy and plots
+│   ├── predict.py            # classify your own photos
 │   └── utils.py              # seeding, device, saving/loading, plotting
 ├── .gitignore
 ├── requirements.txt
@@ -204,6 +205,20 @@ This prints the test accuracy and per-class accuracy, and saves `results/results
 `results/confusion_matrix.png` and `results/sample_predictions.png`.
 
 The trained model is included in the repository, so you can run this step without training.
+
+### 5. Try it on your own photos
+
+```bash
+python -m src.predict path/to/photo.jpg
+```
+
+This prints the model's top 3 guesses and saves `results/prediction_<name>.png`, showing your
+photo next to the 28×28 version the model actually sees. You can pass several images at once.
+
+The script converts the photo to look like Fashion-MNIST (grayscale, garment light on a dark
+background, cropped and centered). Results are best with one garment, laid flat or on a hanger,
+on a plain background that contrasts with it. The model has only ever seen clean product shots,
+so people wearing the clothes, busy backgrounds or several items in one photo will confuse it.
 
 ### Run on Google Colab instead
 

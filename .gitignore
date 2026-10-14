@@ -24,3 +24,6 @@ env/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Previews from src/predict.py (your own photos)
+results/prediction_*.png
