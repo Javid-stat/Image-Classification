@@ -1,0 +1,26 @@
+# Dataset (downloaded automatically by torchvision; never commit it)
+data/*
+!data/.gitkeep
+
+# Model weights: the final model (~2 MB) IS committed so others can run
+# evaluate.py without training. Ignore any other checkpoints you experiment with.
+models/*
+!models/.gitkeep
+!models/fashion_cnn.pth
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
